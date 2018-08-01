@@ -1,0 +1,36 @@
+{
+    "project_type": "javascript",
+    "debugMode": 1,
+    "showFPS": false,
+    "frameRate": 60,
+    "id": "gameCanvas",
+    "renderMode": 0,
+    "engineDir": "frameworks/cocos2d-html5",
+    "modules": [
+        "cocos2d",
+        "cocostudio"
+    ],
+    "jsList": [
+        "src/app.js",
+        "src/resource.js",
+        "src/GameConfig/GameConfig.js",
+        "src/MainMenu/scene/MMScene.js",
+        "src/MainMenu/layer/MMBackgroundLayer.js",
+        "src/MainMenu/layer/MMTouchLayer.js",
+        "src/GamePlay/scene/GPScene.js",
+        "src/GamePlay/layer/GPBackgroundLayer.js",
+        "src/GamePlay/layer/GPTouchLayer.js",
+        "src/GamePlay/layer/GPStatusLayer.js",
+        "src/GamePlay/sprite/SpriteLeft.js",
+        "src/GamePlay/sprite/SpriteRight.js",
+        "src/GamePlay/sprite/Obstacles.js",
+        "src/GamePlay/layer/GPShootstarLayer.js",
+        "src/GamePlay/layer/GPBackgroundImgLayer.js",
+        "src/GamePlay/layer/GPGameOverLayer.js",
+        "src/GamePlay/layer/GPGamePauseLayer.js",
+        "src/GamePlay/layer/GPBloodSlotLayer.js",
+        "src/MainMenu/layer/MMGameIntro.js",
+        
+        "src/loading.js"
+    ]
+}

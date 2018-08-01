@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <script src="js/jquery-1.11.0.js"></script>
+    <script>
+        var sc = sc || {}; //secoinfo namespace
+        //sc.baseUrl = 'http://localhost:18259/';
+        sc.baseUrl = 'http://192.168.1.137:8005/';
+        //sc.baseUrl = 'http://lab.secoinfo.net/baradmin/';
+    </script>
+</head>
+<body>
+    <script>
+        $(function () {
+            var myDate = new Date();
+            var date = myDate.toLocaleString();
+            var time = myDate.toTimeString();
+
+            var tt = date.toString();
+            var tt1 = date.toString();
+            var tt2=time.toString();
+            if (tt.indexOf('年') > -1) {
+                tt=tt.replace('年', '/').replace('月', '/').replace('日', ' ');
+                tt1 = tt.split(' ')[0];
+                tt2 = time.substring(0,8);
+            }
+            $.post(sc.baseUrl + 'Admin/Api/CreateGameInfo', {
+                username: 'pp',
+                score: 123,
+                hitplanettime: 1,
+                missstartimes: 2,
+                eatpeachtimes: 2,
+                bloodupperlimit: 3,
+                starttime: '2015/1/6 下午5:31:19',
+                overtime: '2015/1/6 下午5:31:39'
+            }).success(function (data) {
+                alert('success');
+            }).fail(function (data) {
+                alert('fail');
+                document.write(data.statusText + '|||');
+                document.write(data.responseText);
+                console.log(data);
+            });
+        })
+    </script>
+
+</body>
+</html>

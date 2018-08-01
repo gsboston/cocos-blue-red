@@ -1,0 +1,69 @@
+<Solution>
+  <PropertyGroup Name="BlueAndRed" Version="2.0.2.0" Type="CocosStudio" />
+  <SolutionFolder>
+    <Group ctype="ResourceGroup">
+      <RootFolder Name=".">
+        <Project Name="main_scene.csd" />
+        <Image Name="bg1.jpg" />
+        <Image Name="bg2.jpg" />
+        <PlistInfo Name="plist_images.csi" />
+        <Folder Name="assets">
+          <Image Name="btn_share.png" />
+          <Image Name="heart_blue.png" />
+          <Image Name="heart_red.png" />
+          <Image Name="home_rocket_blue.png" />
+          <Image Name="home_rocket_red.png" />
+          <Image Name="life_bar.png" />
+          <Image Name="life_heart.png" />
+          <Image Name="life_heart_none.png" />
+          <Image Name="logo_secoinfo.png" />
+          <Image Name="planet_blue.png" />
+          <Image Name="planet_red.png" />
+          <Image Name="rocket_blue_1.png" />
+          <Image Name="rocket_red_1.png" />
+          <Image Name="secogameico.png" />
+          <Image Name="star_blue.png" />
+          <Image Name="star_red.png" />
+          <Image Name="title.png" />
+          <Image Name="fire.png" />
+          <Image Name="btn_continues_b0.png" />
+          <Image Name="btn_continues_b1.png" />
+          <Image Name="btn_home_b0.png" />
+          <Image Name="btn_home_b1.png" />
+          <Image Name="btn_home_s0.png" />
+          <Image Name="btn_home_s1.png" />
+          <Image Name="btn_info_b0.png" />
+          <Image Name="btn_info_b1.png" />
+          <Image Name="btn_play_b0.png" />
+          <Image Name="btn_play_b1.png" />
+          <Image Name="btn_ranking_s0.png" />
+          <Image Name="btn_ranking_s1.png" />
+          <Image Name="btn_replay_b0.png" />
+          <Image Name="btn_replay_b1.png" />
+          <Image Name="btn_share_b0.png" />
+          <Image Name="btn_share_b1.png" />
+          <Image Name="btn_wechat2_s0.png" />
+          <Image Name="btn_wechat2_s1.png" />
+          <Image Name="btn_wechat_s0.png" />
+          <Image Name="btn_wechat_s1.png" />
+          <Image Name="btn_weibo2_s0.png" />
+          <Image Name="btn_weibo2_s1.png" />
+          <Image Name="btn_weibo_s0.png" />
+          <Image Name="btn_weibo_s1.png" />
+          <Image Name="info.png" />
+          <Image Name="life_heart10.png" />
+          <Image Name="meteor.png" />
+          <Image Name="btn_gameinfo.png" />
+          <Image Name="btn_ranking_b0.png" />
+          <Image Name="btn_ranking_b1.png" />
+        </Folder>
+        <Project Name="node_rocket.csd" />
+        <Project Name="node_main_button.csd" />
+        <Project Name="node_gameover.csd" />
+        <File Name="Ubuntu-Light_0.ttf" />
+        <PlistParticleFile Name="meteor.plist" />
+        <PlistParticleFile Name="home_fire_jet.plist" />
+      </RootFolder>
+    </Group>
+  </SolutionFolder>
+</Solution>

@@ -1,0 +1,93 @@
+﻿@{
+    if (!Request.Browser.IsMobileDevice && string.IsNullOrEmpty(Request.QueryString["framed"]))
+    {
+        //Response.Redirect("pc.html");
+    }
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="full-screen" content="yes" />
+    <meta name="screen-orientation" content="portrait" />
+    <meta name="x5-fullscreen" content="true" />
+    <meta name="360-fullscreen" content="true" />
+    <meta name="viewport" content="width=400, user-scalable=no" />
+    <title>红蓝小火箭（Red &amp; Blue）</title>
+    <link rel="icon" type="image/GIF" href="res/favicon.ico" />
+    <script src="~/src/modernizr-2.8.3.js"></script>
+    <script src="~/src/seco-browsers.js"></script>
+    <link href="src/site.css" rel="stylesheet" />
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function ()
+            { (i[r].q = i[r].q || []).push(arguments) }
+            , i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-41096708-4', 'auto');
+        ga('send', 'pageview');
+    </script>
+</head>
+<body ng-app="scApp" ng-controller="RootController">
+
+    <canvas id="gameCanvas" width="0" height="0"></canvas>
+    <div class="content ranking_list" id="rankinglist">
+        <div class="content_bg"></div>
+        <div class="ranking_content" ng-click="closeranklist();">
+            <h2></h2>
+            <div class="m-loading activity"></div>
+            <div class="group_scroll" vi-scroll>
+                <div class="group">
+                    <div class="form-group" ng-repeat="gp in list" ng-class="{on:uid==gp.id}">
+                        <span class="ranking">{{gp.rank}}</span>
+                        <span class="name">
+                            <span><img ng-src="{{gp.pic}}" alt="{{gp.nickname}}" /></span>
+                            <span>{{gp.nickname}}</span>
+                        </span>
+                        @*<span class="name">{{gp.nickname}}</span><span class="name"><img ng-src="{{gp.pic}}" /></span>*@
+                        <span class="score">{{gp.score}}</span>
+                    </div>
+                    <div class="form-group">
+                        <span class="ranking">...</span>
+                        <span class="name">...</span>
+                        <span class="score">...</span>
+                    </div>
+                </div>
+            </div>
+            <div class="last-bg" ng-show="curuserscore>0">
+                <div class="form-group last">
+                    <span class="ranking"></span>
+                    <span class="name"><img ng-src="{{curpic}}" /><i>{{curusername}}</i></span>
+                    <span class="score"><i>排名</i>{{rankindex}}<i>得分</i>{{curuserscore}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content game_description">
+        <div class="content_bg"></div>
+        <div class="description"></div>
+    </div>
+    <div class="content share" id="sharelayer" ng-click="closewecharshare(true);">
+        <div class="content_bg"></div>
+        <div class="share-point"></div>
+    </div>
+    <div class="content share" id="pcsharelayer" ng-click="closewecharshare(false);">
+        <div class="content_bg"></div>
+        <div class="share-pc"></div>
+    </div>
+    <script src="src/jquery-1.11.0.js"></script>
+    <script src="src/angular.bundled.min.js"></script>
+    <script src="src/iscroll.js"></script>
+    <script src="src/sha1.js"></script>
+    <script src="src/jweixin-1.0.0.js"></script>
+    <script src="src/seco-app.js"></script>
+    @*<script src="src/seco-app-bundle.min.js"></script>*@
+    <script src="frameworks/cocos2d-html5/CCBoot.js"></script>
+    <script src="main.js"></script>
+
+</body>
+</html>

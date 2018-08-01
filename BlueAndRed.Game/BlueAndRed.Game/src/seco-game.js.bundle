@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<bundle xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://vswebessentials.com/schemas/v1/bundle.xsd">
+  <settings>
+    <!--Determines if the bundle file should be automatically optimized after creation/update.-->
+    <minify>true</minify>
+    <!--Determine whether to generate/re-generate this bundle on building the solution.-->
+    <runOnBuild>false</runOnBuild>
+    <!--Specifies a custom subfolder to save files to. By default, compiled output will be placed in the same folder and nested under the original file.-->
+    <outputDirectory />
+  </settings>
+  <!--The order of the <file> elements determines the order of the files in the bundle.-->
+  <files>
+    <file>/src/resource.js</file>
+    <file>/src/app.js</file>
+    <file>/src/GameConfig/GameConfig.js</file>
+    <file>/src/GamePlay/layer/GPBackgroundImgLayer.js</file>
+    <file>/src/GamePlay/layer/GPBackgroundLayer.js</file>
+    <file>/src/GamePlay/layer/GPBloodSlotLayer.js</file>
+    <file>/src/GamePlay/layer/GPGameOverLayer.js</file>
+    <file>/src/GamePlay/layer/GPGamePauseLayer.js</file>
+    <file>/src/GamePlay/layer/GPShootstarLayer.js</file>
+    <file>/src/GamePlay/layer/GPStatusLayer.js</file>
+    <file>/src/GamePlay/layer/GPTouchLayer.js</file>
+    <file>/src/GamePlay/scene/GPScene.js</file>
+    <file>/src/GamePlay/sprite/Obstacles.js</file>
+    <file>/src/GamePlay/sprite/SpriteLeft.js</file>
+    <file>/src/GamePlay/sprite/SpriteRight.js</file>
+    <file>/src/MainMenu/layer/MMBackgroundLayer.js</file>
+    <file>/src/MainMenu/layer/MMGameIntro.js</file>
+    <file>/src/MainMenu/layer/MMTouchLayer.js</file>
+    <file>/src/MainMenu/scene/MMScene.js</file>
+    <file>/src/loading.js</file>
+  </files>
+</bundle>

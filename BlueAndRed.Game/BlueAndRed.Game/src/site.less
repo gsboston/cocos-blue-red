@@ -1,0 +1,107 @@
+﻿@font-face { font-family: 'ubuntu-light'; src: url('../res/ubuntu-light-webfont.woff') format('woff'); font-weight: normal; font-style: normal; }
+@font-family-sans-serif: "ubuntu-light", sans-serif;
+body { background-color: #000; }
+body, canvas, div { font-family: @font-family-sans-serif; -moz-user-select: none; -webkit-user-select: none; -ms-user-select: none; -khtml-user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
+* { margin: 0; }
+
+/* 全局设置 */
+.content { position: fixed; top: 0; width: 100%; height: 100%; opacity: 0; pointer-events: none; -moz-transition: all ease .4s; -o-transition: all ease .4s; -webkit-transition: all ease .4s; transition: all ease .4s;
+    .content_bg { opacity: 0.9; background-color: #000; }
+    &.on { opacity: 1; pointer-events: auto; }
+}
+
+html, body, .content_bg, .ranking_content { width: 100%; height: 100%; }
+
+/* 排行榜 */
+.ranking_list {
+    .ranking_content { position: absolute; top: 0; color: #fff;
+        h2 { width: 100%; height: 23px; background: url(../res/rangking-title.png) no-repeat center center; background-size: contain; margin: 30px 0; }
+        .group_scroll { height: 75%; overflow: hidden;
+            .group { width: 100%; }
+        }
+        .form-group { width: 90%; height: 33px; line-height: 33px; border-radius: 5px; margin: 0 auto 3px; position: relative;
+            > span { display: block; position: absolute; }
+            .ranking { width: 74px; left: 12px; text-align: left; font-size: 14px; overflow: hidden; display: block; text-overflow: ellipsis; white-space: nowrap;
+                html.mobile & { font-size: 18px; }
+            }
+            .name { width: 160px; left: 24%; font-size: 14px; overflow: hidden; display: block; text-overflow: ellipsis; white-space: nowrap;
+                img { float: left; margin: 4px 6px 0 0; width: 24px; height: 24px; background-color: #787878; }
+                html.mobile & { font-size: 18px; }
+            }
+            .score { width: 74px; right: 12px; text-align: right; font-size: 14px; overflow: hidden; display: block; text-overflow: ellipsis; white-space: nowrap;
+                html.mobile & { font-size: 18px; }
+            }
+            &.on { background-color: #1d1d1e; }
+            &.last { position: absolute; left: 50%; margin-left: -45%; top: 50%; margin-top: -14px;
+                .ranking { left: 0; width: 100%; text-align: center; }
+                .name { left: 12px; }
+                .score { overflow: visible; width: auto; }
+                span { font-size: 14px;
+                    html.mobile & { font-size: 20px; }
+                    i { font-style: normal; margin-right: 4px; font-size: 12px; margin-left: 8px;
+                        html.mobile & { font-size: 14px; }
+                    }
+                }
+            }
+        }
+        .last-bg { width: 100%; height: 42px; position: absolute; bottom: 0; background-color: #133450; }
+    }
+}
+
+@-webkit-keyframes rotate360 {
+    0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@keyframes rotate360 {
+    0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+.m-loading { width: 30px; height: 30px; position: absolute; left: 50%; top: 50%; margin: -15px 0 0 -15px; opacity: 1; transition: all ease .4s; -webkit-transition: all ease .4s;
+    &.activity { border: solid 2px transparent; border-color: #00aac1 #00aac1 #f13a63 transparent; border-radius: 100%; -moz-animation: rotate360 .5s linear infinite; -o-animation: rotate360 .5s linear infinite; -webkit-animation: rotate360 .5s linear infinite; animation: rotate360 .5s linear infinite; }
+    &.on { opacity: 0; }
+}
+
+/* 分享页面 */
+.share {
+    .share-point { position: absolute; width: 100%; height: 104px; top: 10px; background: url(../res/share.png) no-repeat center center; background-size: contain; }
+    .share-pc { position: absolute; width: 100%; height: 100%; top: 0; background: url(../res/share-pc.png) no-repeat center center; background-size: contain; }
+}
+
+.pc { width: 100%; min-height: 960px; background: url(../res/pc-bg.jpg) no-repeat top center;
+    .container { width: 980px; height: 100%; margin: 0 auto; position: relative; }
+    .left-ct { position: absolute; left: 0; top: 0; font-size: 12px;
+        .ct { margin-bottom: 45px;
+            .h-title { width: 105px; height: 23px; background-repeat: no-repeat; background-position: left center; margin-bottom: 20px;
+                &.h1 { background-image: url(../res/h-title1.png); }
+                &.h2 { background-image: url(../res/h-title2.png); }
+                &.h3 { background-image: url(../res/h-title3.png); }
+            }
+            .in { margin-left: 25px;
+                a { color: #fff; text-decoration: none; margin-right: 10px;
+                    &:hover { text-decoration: underline; }
+                }
+            }
+        }
+        .rockets { width: 179px; height: 111px; background: url(../res/rockets.png) no-repeat center center; margin-bottom: 16px; }
+        p { line-height: 20px; color: #fff; }
+        .wechar { color: #fff; width: 144px; height: 165px; text-align: center; display: inline-block; margin-right: 30px !important; 
+            &:hover { text-decoration: none!important; }
+            i { font-size: 14px; width: 100%; text-align: center; font-style: normal; }
+            span { width: 144px; height: 144px; display: inline-block; margin: 5px 0; background-image: url(../res/erwei.png); background-repeat: no-repeat; }
+            &.w1 span { background-position: left center; }
+            &.w2 span { background-position: right center; }
+        }
+        .title { margin-top: 30px; width: 470px; height: 105px; background: url(../res/title.png) no-repeat center center; }
+    }
+    .game { position: absolute; right: 65px; top: 68px; width: 320px; height: 568px; background: #000; border: 1px solid #00add8; }
+    .game-top { position: absolute; width: 322px; height: 20px; right: 65px; top: 48px; background: url(../res/game-top.jpg) no-repeat center center; }
+
+    .copy { position: absolute; right: 0; bottom: 10px; text-align: right; color: #fff; font-size: 12px; font-style: italic; }
+    .middle { width: 100%; height: 76px; position: absolute; text-align: center; bottom: 20px;
+        .logo { display: block; margin: 0 auto; width: 107px; height: 28px; margin-bottom: 10px; background: url(../res/logo.png); }
+        p { text-align: center; width: 100%; line-height: 18px; color: #fff; font-size: 12px; }
+    }
+}

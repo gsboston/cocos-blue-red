@@ -1,0 +1,45 @@
+<PlistInfoProjectFile>
+  <PropertyGroup Type="Plist" Name="plist_images" ID="d714f83a-c577-479a-91bb-6ac98519fbdd" Version="2.0.2.0" />
+  <Content ExportType="Png" SortAlgorithm="MaxRects" PicturePadding="10" AllowRotation="False" AllowAnySize="True" AllowTrim="True" ctype="PlistInfoData">
+    <ImageFiles>
+      <FilePathData Path="assets/heart_blue.png" />
+      <FilePathData Path="assets/heart_red.png" />
+      <FilePathData Path="assets/life_bar.png" />
+      <FilePathData Path="assets/life_heart.png" />
+      <FilePathData Path="assets/life_heart_none.png" />
+      <FilePathData Path="assets/logo_secoinfo.png" />
+      <FilePathData Path="assets/planet_blue.png" />
+      <FilePathData Path="assets/planet_red.png" />
+      <FilePathData Path="assets/rocket_blue_1.png" />
+      <FilePathData Path="assets/rocket_red_1.png" />
+      <FilePathData Path="assets/secogameico.png" />
+      <FilePathData Path="assets/star_blue.png" />
+      <FilePathData Path="assets/star_red.png" />
+      <FilePathData Path="assets/btn_continues_b0.png" />
+      <FilePathData Path="assets/btn_continues_b1.png" />
+      <FilePathData Path="assets/btn_home_b0.png" />
+      <FilePathData Path="assets/btn_home_b1.png" />
+      <FilePathData Path="assets/btn_home_s0.png" />
+      <FilePathData Path="assets/btn_home_s1.png" />
+      <FilePathData Path="assets/btn_info_b0.png" />
+      <FilePathData Path="assets/btn_info_b1.png" />
+      <FilePathData Path="assets/btn_play_b0.png" />
+      <FilePathData Path="assets/btn_play_b1.png" />
+      <FilePathData Path="assets/btn_ranking_s0.png" />
+      <FilePathData Path="assets/btn_ranking_s1.png" />
+      <FilePathData Path="assets/btn_replay_b0.png" />
+      <FilePathData Path="assets/btn_replay_b1.png" />
+      <FilePathData Path="assets/btn_share_b0.png" />
+      <FilePathData Path="assets/btn_share_b1.png" />
+      <FilePathData Path="assets/btn_wechat_s0.png" />
+      <FilePathData Path="assets/btn_wechat_s1.png" />
+      <FilePathData Path="assets/btn_weibo_s0.png" />
+      <FilePathData Path="assets/btn_weibo_s1.png" />
+      <FilePathData Path="assets/life_heart10.png" />
+      <FilePathData Path="assets/btn_gameinfo.png" />
+      <FilePathData Path="assets/btn_ranking_b0.png" />
+      <FilePathData Path="assets/btn_ranking_b1.png" />
+    </ImageFiles>
+    <MaxSize Width="1024" Height="1024" />
+  </Content>
+</PlistInfoProjectFile>
